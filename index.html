@@ -76,12 +76,16 @@
             gap: 25px;
         }
 
+        /* خليناه عنصر <a> عشان يشتغل الرابط صح وبنفس شكل الكارت */
         .card {
+            display: block;
             background-color: var(--card-bg);
             border: 1px solid var(--border);
             border-radius: 12px;
             padding: 30px 20px;
             text-align: center;
+            text-decoration: none;
+            color: inherit;
             transition: all 0.3s ease;
             cursor: pointer;
             position: relative;
@@ -138,11 +142,12 @@
 
     <!-- الأقسام الرئيسية -->
     <div class="container">
-        <div class="card">
+        <!-- كارت تعديل الـ PS4 (مرتبط بملف ps4.html) -->
+        <a href="ps4.html" class="card">
             <div class="icon">🕹️</div>
             <h3>تعديل PS4</h3>
-            <p>أحدث شروحات الفيرموير، طريقة تشغيل الـ GoldHEN والأدوات اللازمة.</p>
-        </div>
+            <p>أحدث شروحات الإصدارات، البدايات التاريخية، وطريقة تشغيل الثغرات بأمان.</p>
+        </a>
 
         <div class="card">
             <div class="icon">📦</div>
