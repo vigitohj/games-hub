@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مركز الألعاب والشروحات</title>
+    <title>GameHub - منصة تعديل وألعاب البلايستيشن</title>
     <style>
         :root {
             --bg-color: #0b0f19;
@@ -28,149 +28,125 @@
             min-height: 100vh;
             display: flex;
             flex-direction: column;
+            padding: 20px;
         }
 
-        /* Navbar */
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 40px;
+            padding: 15px 30px;
             background-color: var(--card-bg);
-            border-bottom: 1px solid var(--border);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            margin-bottom: 40px;
         }
 
         .logo {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             font-weight: bold;
             color: var(--accent);
+            text-decoration: none;
         }
 
-        /* Hero Section */
-        .hero {
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
             text-align: center;
-            padding: 80px 20px;
-            background: radial-gradient(circle at center, rgba(59, 130, 246, 0.1) 0%, transparent 70%);
+            flex: 1;
         }
 
-        .hero h1 {
+        h1 {
             font-size: 2.8rem;
             margin-bottom: 15px;
             color: #ffffff;
         }
 
-        .hero p {
-            font-size: 1.2rem;
+        p.subtitle {
             color: var(--text-muted);
-            max-width: 600px;
-            margin: 0 auto;
+            font-size: 1.2rem;
+            margin-bottom: 50px;
         }
 
-        /* Grid Cards */
-        .container {
-            max-width: 1100px;
-            margin: 0 auto 60px;
-            padding: 0 20px;
+        .sections-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 25px;
+            margin-bottom: 40px;
         }
 
-        /* خليناه عنصر <a> عشان يشتغل الرابط صح وبنفس شكل الكارت */
-        .card {
-            display: block;
+        .section-card {
             background-color: var(--card-bg);
             border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 30px 20px;
-            text-align: center;
+            border-radius: 14px;
+            padding: 35px 25px;
             text-decoration: none;
             color: inherit;
             transition: all 0.3s ease;
-            cursor: pointer;
-            position: relative;
-            overflow: hidden;
+            display: block;
+            text-align: right;
         }
 
-        .card:hover {
-            transform: translateY(-8px);
+        .section-card:hover {
+            transform: translateY(-5px);
             border-color: var(--accent);
-            box-shadow: 0 10px 25px var(--accent-glow);
+            box-shadow: 0 12px 30px var(--accent-glow);
         }
 
-        .card .icon {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-        }
-
-        .card h3 {
-            font-size: 1.3rem;
-            margin-bottom: 10px;
+        .section-card h2 {
+            font-size: 1.6rem;
             color: #ffffff;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
 
-        .card p {
+        .section-card p {
             font-size: 0.95rem;
             color: var(--text-muted);
             line-height: 1.5;
         }
 
-        /* Footer */
         footer {
-            margin-top: auto;
             text-align: center;
             padding: 20px;
-            background-color: var(--card-bg);
-            border-top: 1px solid var(--border);
             color: var(--text-muted);
             font-size: 0.9rem;
+            border-top: 1px solid var(--border);
+            margin-top: auto;
         }
     </style>
 </head>
 <body>
 
-    <!-- شريط التنقل العلوي -->
-    <nav>
-        <div class="logo">🎮 GameHub</div>
-    </nav>
-
-    <!-- الواجهة الرئيسية -->
-    <section class="hero">
-        <h1>مرحباً بك في بوابتك الشاملة</h1>
-        <p>كل ما تبحث عنه من أدوات التعديل، مصادر الألعاب، والمحتوى الترفيهي في مكان واحد بكل سهولة.</p>
-    </section>
-
-    <!-- الأقسام الرئيسية -->
     <div class="container">
-        <!-- كارت تعديل الـ PS4 (مرتبط بملف ps4.html) -->
-        <a href="ps4.html" class="card">
-            <div class="icon">🕹️</div>
-            <h3>تعديل PS4</h3>
-            <p>أحدث شروحات الإصدارات، البدايات التاريخية، وطريقة تشغيل الثغرات بأمان.</p>
-        </a>
+        <!-- شريط التنقل -->
+        <nav>
+            <a href="index.html" class="logo">🎮 GameHub</a>
+        </nav>
 
-        <div class="card">
-            <div class="icon">📦</div>
-            <h3>ألعاب PS4</h3>
-            <p>أفضل المصادر والمواقع الموثوقة لتحميل ألعاب الـ PKG بسهولة.</p>
-        </div>
+        <h1>مرحباً بك في GameHub</h1>
+        <p class="subtitle">دليلك الشامل لتعديل أجهزة البلايستيشن، حماية النظام، وتحميل الألعاب بأمان.</p>
 
-        <div class="card">
-            <div class="icon">💻</div>
-            <h3>ألعاب PC</h3>
-            <p>أقوى مواقع ألعاب الكمبيوتر المجانية ومصادر الـ Repacks الآمنة.</p>
-        </div>
+        <!-- شبكة الأقسام الرئيسية -->
+        <div class="sections-grid">
+            <!-- قسم تعديل الـ PS4 -->
+            <a href="ps4.html" class="section-card">
+                <h2>🛠️ تعديل أجهزة PS4</h2>
+                <p>دليل شامل لمعرفة الإصدارات، خطوات الأمان، تفعيل الـ DNS، والانتقال المباشر لاستضافات التفعيل مثل Karo.</p>
+            </a>
 
-        <div class="card">
-            <div class="icon">📺</div>
-            <h3>كرتون ومسلسلات</h3>
-            <p>روابط ومصادر لمشاهدة وتحميل الكرتون والترفيه المفضل لديك.</p>
+            <!-- قسم تحميل ألعاب الـ PS4 (الجديد) -->
+            <a href="games.html" class="section-card">
+                <h2>📥 تحميل وتثبيت ألعاب PS4</h2>
+                <p>تعرف على أشهر المصادر الموثوقة (مثل DLPSGAME و 4Gamer)، كيفية تجميع الأجزاء، وطرق التثبيت.</p>
+            </a>
         </div>
     </div>
 
-    <!-- التذييل -->
     <footer>
-        <p>تم التصميم والتطوير بكل حب | مرفوع على GitHub Pages</p>
+        <p>GameHub &copy; 2026 - جميع الحقوق محفوظة لمجتمع اللاعبين</p>
     </footer>
 
 </body>
