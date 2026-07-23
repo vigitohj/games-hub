@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تعديل PS4 - إصدار 6.72 - GameHub</title>
+    <style>
+        :root {
+            --bg-color: #0b0f19;
+            --card-bg: #111827;
+            --text-main: #f3f4f6;
+            --text-muted: #9ca3af;
+            --accent: #3b82f6;
+            --accent-glow: rgba(59, 130, 246, 0.2);
+            --border: #1f2937;
+            --warning-bg: rgba(234, 179, 8, 0.1);
+            --warning-border: #eab308;
+            --thanks-bg: rgba(59, 130, 246, 0.1);
+            --thanks-border: #3b82f6;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+
+        .logo {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .back-btn {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .back-btn:hover {
+            color: var(--accent);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            color: #ffffff;
+            margin-bottom: 10px;
+            font-size: 2.2rem;
+        }
+
+        .subtitle {
+            color: var(--text-muted);
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .thanks-box {
+            background-color: var(--thanks-bg);
+            border: 1px solid var(--thanks-border);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 25px;
+            color: #93c5fd;
+        }
+
+        .thanks-box h3 {
+            margin-bottom: 8px;
+            color: #60a5fa;
+        }
+
+        .reassurance-box {
+            background-color: var(--warning-bg);
+            border: 1px solid var(--warning-border);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 30px;
+            color: #fde047;
+        }
+
+        .reassurance-box h3 {
+            margin-bottom: 8px;
+        }
+
+        .content-box {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 25px;
+        }
+
+        .content-box h2 {
+            color: var(--accent);
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 10px;
+        }
+
+        ul {
+            padding-right: 20px;
+            color: var(--text-muted);
+        }
+
+        li {
+            margin-bottom: 12px;
+        }
+
+        strong {
+            color: var(--text-main);
+        }
+
+        code {
+            background-color: #1f2937;
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: #60a5fa;
+            font-family: monospace;
+        }
+
+        .btn-link {
+            display: inline-block;
+            background-color: var(--accent);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            margin-top: 15px;
+            transition: background-color 0.2s, box-shadow 0.2s;
+            font-weight: bold;
+        }
+
+        .btn-link:hover {
+            background-color: #2563eb;
+            box-shadow: 0 0 15px var(--accent-glow);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- شريط التنقل -->
+        <nav>
+            <a href="index.html" class="logo">🎮 GameHub</a>
+            <a href="ps4.html" class="back-btn">← العودة لاختيار الإصدارات</a>
+        </nav>
+
+        <h1>دليل تعديل الـ PS4 (إصدار 6.72)</h1>
+        <p class="subtitle">تعديل بدون فلاشة USB يعتمد على المتصفح بشكل كامل، مع شرح تفصيلي لخيارات الاستضافة.</p>
+
+        <!-- شكر خاص -->
+        <div class="thanks-box">
+            ### ⭐ شكر خاص وتقدير:
+            <p>كل الشكر للمبدع <strong>Karo</strong> على استضافاته المستقرة، والمطورين العظماء أمثال <strong>SpecterDev</strong> على تطوير وتثبيت ثغرات نظام 6.72.</p>
+        </div>
+
+        <!-- صندوق الملاحظة -->
+        <div class="reassurance-box">
+            <h3>💡 هل إصدار 6.72 يحتاج فلاشة؟</h3>
+            <p>لا، التعديل يتم بالكامل عبر متصفح البلايستيشن **بدون الحاجة نهائياً لأي فلاشة USB**، لكنه قد يحتاج أحياناً لأكثر من محاولة حتى تنجح الثغرة.</p>
+        </div>
+
+        <!-- الخطوة الأولى: حماية الجهاز بـ DNS -->
+        <div class="content-box">
+            <h2>1. تأمين الاتصال وحجب التحديثات بـ DNS Al-Azif (خطوة إجبارية)</h2>
+            <p>عشان تحمي جهازك من التحديث التلقائي لسوني وتتصل بأمان:</p>
+            <ul>
+                <li>روح على <strong>Settings</strong> ثم <strong>Network</strong> ثم <strong>Set Up Internet Connection</strong>.</li>
+                <li>اختار نوع الاتصال (Wi-Fi أو LAN) واختار <strong>Custom</strong> (مخصص).</li>
+                <li>في إعدادات الـ DNS اختار <strong>Manual</strong>، ودخل الأرقام التالية:
+                    <ul>
+                        <li><strong>Primary DNS:</strong> <code>165.227.83.145</code></li>
+                        <li><strong>Secondary DNS:</strong> سيبه فاضي أو خليه <code>0.0.0.0</code></li>
+                    </ul>
+                </li>
+                <li>أكمل باقي الخطوات (Automatic و Do Not Use) وبكده جهازك محمي تماماً.</li>
+            </ul>
+        </div>
+
+        <!-- الخطوة الثانية: فهم خيارات استضافة Karo لإصدار 6.72 -->
+        <div class="content-box">
+            <h2>2. ماذا تختار داخل استضافة Karo لإصدار 6.72؟ (توضيح الاختيارات)</h2>
+            <p>لما تدخل على موقع Karo وتختار قسم 6.72، هتلاقي أسماء واختيارات كتيرة. إليك معناها عشان تختار الصح:</p>
+            <ul>
+                <li><strong>6.72 / goldhen672:</strong> الخيار الأساسي والرئيسي لتفعيل الـ GoldHEN المباشر والمستقر على النظام (يُنصح بالبدء به دائماً).</li>
+                <li><strong>6.72A (Alih):</strong> نسخة معدلة من الثغرة مدمج معها بعض التحسينات الطفيفة أو الحلقات البرمجية البديلة لتقليل أخطاء النظام (Kernel Panic).</li>
+                <li><strong>6.72L (Loader):</strong> مخصص لتحميل أدوات محددة أو تشغيل لواحق برمجية متقدمة (غالباً مش هتحتاجه كمستخدم عادي للألعاب).</li>
+                <li><strong>esp672tr:</strong> مخصص للأجهزة المصغرة أو الـ ESP Boards (مثل الراوتر الصغير أو القطع الخارجية اللي بتبث استضافة محلية أحياناً).</li>
+            </ul>
+        </div>
+
+        <!-- الخطوة الثالثة: طريقة التنفيذ والتشغيل -->
+        <div class="content-box">
+            <h2>3. خطوات تشغيل الثغرة عبر الاستضافة</h2>
+            <ul>
+                <li>تأكد من تفعيل الـ DNS المتصل بالإنترنت، ثم افتح متصفح الـ PS4.</li>
+                <li>ادخل على استضافة Karo الشهيرة.</li>
+                <li>اضغط على خيار <strong>6.72</strong> أو <strong>goldhen672</strong> المفضل لديك.</li>
+                <li>انتظر قليلاً حتى يتم تحميل ملفات الـ Cache وسيقوم الجهاز بتطبيق الثغرة.</li>
+                <li>لو ظهرت رسالة نجاح مثل <code>You're all set</code> أو تفعيل الـ GoldHEN، مبروك عليك! (لو الجهاز هنج أو فصل مفاجئ، دي طبيعة 6.72 أحياناً، كل ما عليك إعادته والمحاولة مرة أخرى حتى تنجح).</li>
+            </ul>
+            <br>
+            <a href="http://karo218.ir" target="_blank" class="btn-link">🔗 الانتقال المباشر لاستضافة Karo</a>
+        </div>
+
+    </div>
+
+</body>
+</html>
