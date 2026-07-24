@@ -17,6 +17,8 @@
             --warning-border: #eab308;
             --thanks-bg: rgba(59, 130, 246, 0.1);
             --thanks-border: #3b82f6;
+            --guide-alert-bg: rgba(59, 130, 246, 0.15);
+            --guide-alert-border: #3b82f6;
         }
 
         * {
@@ -76,6 +78,40 @@
             color: var(--text-muted);
             margin-bottom: 20px;
             font-size: 1.1rem;
+        }
+
+        /* سطر التوجيه لقسم الشروحات والأدلة */
+        .guide-alert {
+            background-color: var(--guide-alert-bg);
+            border: 1px solid var(--guide-alert-border);
+            border-radius: 12px;
+            padding: 15px 20px;
+            margin-bottom: 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .guide-alert p {
+            color: #93c5fd;
+            margin: 0;
+            font-weight: 500;
+        }
+
+        .guide-alert a {
+            background-color: var(--accent);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: background-color 0.2s;
+        }
+
+        .guide-alert a:hover {
+            background-color: #2563eb;
         }
 
         .thanks-box {
@@ -166,11 +202,17 @@
         <!-- شريط التنقل -->
         <nav>
             <a href="index.html" class="logo">🎮 GameHub</a>
-            <a href="ps4.html" class="back-btn">← العودة لاختيار الإصدارات</a>
+            <a href="versions.html" class="back-btn">← العودة لاختيار الإصدارات</a>
         </nav>
 
         <h1>دليل تعديل الـ PS4 (إصدار 6.72)</h1>
         <p class="subtitle">تعديل بدون فلاشة USB يعتمد على المتصفح بشكل كامل، مع شرح تفصيلي لخيارات الاستضافة.</p>
+
+        <!-- سطر التوجيه لقسم الشروحات لو مش عارف حاجة -->
+        <div class="guide-alert">
+            <p>🤔 مش عارف معاني الأزرار والاختصارات جوه الاستضافة؟</p>
+            <a href="guides.html">📖 روح لقسم الشروحات والأدلة</a>
+        </div>
 
         <!-- شكر خاص -->
         <div class="thanks-box">
