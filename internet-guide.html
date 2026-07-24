@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شرح الاتصال الآمن بالإنترنت - GameHub</title>
+    <style>
+        :root {
+            --bg-color: #0b0f19;
+            --card-bg: #111827;
+            --text-main: #f3f4f6;
+            --text-muted: #9ca3af;
+            --accent: #3b82f6;
+            --border: #1f2937;
+            --danger-bg: rgba(239, 68, 68, 0.1);
+            --danger-border: #ef4444;
+            --success-bg: rgba(16, 185, 129, 0.1);
+            --success-border: #10b981;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            padding: 20px;
+            line-height: 1.7;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+
+        .logo {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .back-btn {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .back-btn:hover {
+            color: var(--accent);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            color: #ffffff;
+            margin-bottom: 10px;
+            font-size: 2.2rem;
+        }
+
+        .subtitle {
+            color: var(--text-muted);
+            margin-bottom: 25px;
+            font-size: 1.1rem;
+        }
+
+        .content-box {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 25px;
+        }
+
+        .content-box h2 {
+            color: var(--accent);
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 10px;
+        }
+
+        .danger-box {
+            background-color: var(--danger-bg);
+            border: 1px solid var(--danger-border);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            color: #fca5a5;
+        }
+
+        .danger-box h3 {
+            color: #f87171;
+            margin-bottom: 8px;
+        }
+
+        .success-box {
+            background-color: var(--success-bg);
+            border: 1px solid var(--success-border);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            color: #6ee7b7;
+        }
+
+        .success-box h3 {
+            color: #34d399;
+            margin-bottom: 8px;
+        }
+
+        ul {
+            padding-right: 20px;
+            color: var(--text-muted);
+        }
+
+        li {
+            margin-bottom: 12px;
+        }
+
+        strong {
+            color: var(--text-main);
+        }
+
+        code {
+            background-color: #1f2937;
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: #60a5fa;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- شريط التنقل -->
+        <nav>
+            <a href="index.html" class="logo">🎮 GameHub</a>
+            <a href="guides.html" class="back-btn">← العودة لقائمة الشروحات</a>
+        </nav>
+
+        <h1>شرح الاتصال الآمن بالإنترنت</h1>
+        <p class="subtitle">دليلك الكامل لحماية جهازك من التحديثات الإجبارية وضبط شبكة الـ DNS.</p>
+
+        <!-- المحتوى -->
+        <div class="content-box">
+            <h2>🛡️ لماذا وكيف نحمي اتصال البلايستيشن؟</h2>
+            
+            <div class="danger-box">
+                <h3>❌ ليه مينفعش نتصل بالإنترنت بشكل عادى (بدون حماية)؟</h3>
+                <p>لو وصلتو جهاز البلايستيشن بالإنترنت العادي (بدون ضبط الـ DNS)، سوني هتقوم أوتوماتيكياً وبكل قسوة بتحميل أحدث ملف تحديث رسمي للجهاز في الخلفية. بمجرد تثبيت التحديث الجديد ده، <strong>هيطير منك التعديل للأبد</strong> ومش هتقدر ترجعه لأن سوني مقفلة الثغرات القديمة، وساعتها جهازك هيبقى "مفوت" ومش هتستفيد من التعديل نهائياً.</p>
+            </div>
+
+            <div class="success-box">
+                <h3>✅ إزاي الـ DNS هيفيدنا وهيحمي الجهاز؟</h3>
+                <p>الـ DNS (مثل سيرفرات Al-Azif الشهيرة) بيقوم بعمل "جدار صد" أو فلاتر ذكية لطلبات الشبكة:</p>
+                <ul>
+                    <li><strong>حجب سيرفرات التحديثات:</strong> بيمنع البلايستيشن تماماً من الاتصال بسيرفرات سوني الخاصة بتحميل التحديثات الرسمية، فلو الجهاز حاول يبحث عن تحديث، السيرفر بيرده فوراً كأن مفيش نت.</li>
+                    <li><strong>السماح بفتح المتصفح والاستضافات:</strong> في نفس الوقت، الـ DNS بيسمح لك بالدخول على مواقع الإنترنت العادية ومتصفح الجهاز عشان تقدر تفتح استضافات الـ Jailbreak بأمان تام.</li>
+                </ul>
+            </div>
+
+            <h3>خطوات ضبط الاتصال الآمن خطوة بخطوة:</h3>
+            <ul>
+                <li>روح على <strong>Settings</strong> ثم <strong>Network</strong> ثم <strong>Set Up Internet Connection</strong>.</li>
+                <li>اختر نوع الاتصال بتاعك (Wi-Fi أو شبكة سلكية LAN).</li>
+                <li>لما يسألك عن طريقة الإعداد، اختار <strong>Custom (مخصص)</strong> ومش Automatic.</li>
+                <li>في خانة الـ IP Address والـ DHCP اختر Automatic.</li>
+                <li>في إعدادات الـ DNS اختار <strong>Manual (يدوي)</strong> ودخل الرقم ده بدقة:
+                    <ul>
+                        <li><strong>Primary DNS:</strong> <code>165.227.83.145</code></li>
+                        <li><strong>Secondary DNS:</strong> سيبه فاضي أو خليه <code>0.0.0.0</code></li>
+                    </ul>
+                </li>
+                <li>كمل باقي الخطوات (Proxy Server اختار <strong>Do Not Use</strong>).</li>
+            </ul>
+        </div>
+
+    </div>
+
+</body>
+</html>
