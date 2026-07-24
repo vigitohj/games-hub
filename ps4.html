@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>اختيار إصدار الـ PS4 - GameHub</title>
+    <title>قسم أجهزة الـ PS4 - GameHub</title>
     <style>
         :root {
             --bg-color: #0b0f19;
@@ -64,6 +64,7 @@
             margin: 0 auto;
             text-align: center;
             flex: 1;
+            width: 100%;
         }
 
         h1 {
@@ -78,13 +79,13 @@
             margin-bottom: 40px;
         }
 
-        .versions-grid {
+        .sections-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 25px;
         }
 
-        .version-card {
+        .section-card {
             background-color: var(--card-bg);
             border: 1px solid var(--border);
             border-radius: 14px;
@@ -96,43 +97,33 @@
             text-align: right;
         }
 
-        .version-card:hover {
+        .section-card:hover {
             transform: translateY(-5px);
             border-color: var(--accent);
             box-shadow: 0 12px 30px var(--accent-glow);
         }
 
-        .version-card h3 {
+        .section-card h3 {
             font-size: 1.8rem;
             color: #ffffff;
             margin-bottom: 10px;
         }
 
-        .version-card p {
+        .section-card p {
             font-size: 0.95rem;
             color: var(--text-muted);
             margin-bottom: 15px;
             line-height: 1.5;
         }
 
-        .badge-stable {
+        .badge-info {
             display: inline-block;
             font-size: 0.85rem;
             padding: 5px 10px;
             border-radius: 6px;
-            background-color: rgba(16, 185, 129, 0.1);
-            color: #10b981;
-            border: 1px solid rgba(16, 185, 129, 0.2);
-        }
-
-        .badge-warning {
-            display: inline-block;
-            font-size: 0.85rem;
-            padding: 5px 10px;
-            border-radius: 6px;
-            background-color: rgba(245, 158, 11, 0.1);
-            color: #f59e0b;
-            border: 1px solid rgba(245, 158, 11, 0.2);
+            background-color: rgba(59, 130, 246, 0.1);
+            color: #3b82f6;
+            border: 1px solid rgba(59, 130, 246, 0.2);
         }
     </style>
 </head>
@@ -145,23 +136,23 @@
             <a href="index.html" class="back-btn">← الرئيسية</a>
         </nav>
 
-        <h1>اختر إصدار جهازك</h1>
-        <p class="subtitle">حدد إصدار نظام جهازك (System Software) للذهاب للدليل المناسب له.</p>
+        <h1>قسم أجهزة الـ PS4</h1>
+        <p class="subtitle">اختر القسم الذي تريد تصفحه للبدء.</p>
 
-        <!-- شبكة اختيار الإصدارات -->
-        <div class="versions-grid">
-            <!-- إصدار 5.05 -->
-            <a href="5.05.html" class="version-card">
-                <h3>إصدار 5.05</h3>
-                <p>الإصدار الأقوى والأكثر استقراراً في تاريخ تعديل البلايستيشن.</p>
-                <span class="badge-stable">🟢 مستقر تماماً وبدون فلاشة</span>
+        <!-- الأقسام الرئيسية (أزرار كبرى تشبه الإصدارات) -->
+        <div class="sections-grid">
+            <!-- زر قسم الإصدارات -->
+            <a href="versions.html" class="section-card">
+                <h3>إصدارات التعديل</h3>
+                <p>تصفح إصدارات نظام البلايستيشن (5.05 و 6.72) وطريقة التفعيل.</p>
+                <span class="badge-info">⚙️ الأقسام والثغرات</span>
             </a>
 
-            <!-- إصدار 6.72 -->
-            <a href="6.72.html" class="version-card">
-                <h3>إصدار 6.72</h3>
-                <p>تعديل يعتمد على المتصفح بدون فلاشة، يشغل ألعاب أحدث.</p>
-                <span class="badge-warning">🟡 بدون فلاشة - يحتاج صبر</span>
+            <!-- زر قسم الشروحات والأدلة -->
+            <a href="guides.html" class="section-card">
+                <h3>قسم الشروحات والأدلة</h3>
+                <p>مجموعة من الأدلة والشروحات التفصيلية لاستضافات وأدوات التعديل.</p>
+                <span class="badge-info">📚 الأدلة والشروحات</span>
             </a>
         </div>
     </div>
