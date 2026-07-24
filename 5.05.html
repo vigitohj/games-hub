@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>تعديل PS4 - إصدار 5.05 وما بعده - GameHub</title>
+    <title>تعديل PS4 - إصدار 5.05 - GameHub</title>
     <style>
         :root {
             --bg-color: #0b0f19;
@@ -17,6 +17,8 @@
             --warning-border: #eab308;
             --thanks-bg: rgba(59, 130, 246, 0.1);
             --thanks-border: #3b82f6;
+            --guide-alert-bg: rgba(59, 130, 246, 0.15);
+            --guide-alert-border: #3b82f6;
         }
 
         * {
@@ -78,7 +80,40 @@
             font-size: 1.1rem;
         }
 
-        /* صندوق الشكر الخاص */
+        /* سطر التوجيه لقسم الشروحات والأدلة */
+        .guide-alert {
+            background-color: var(--guide-alert-bg);
+            border: 1px solid var(--guide-alert-border);
+            border-radius: 12px;
+            padding: 15px 20px;
+            margin-bottom: 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .guide-alert p {
+            color: #93c5fd;
+            margin: 0;
+            font-weight: 500;
+        }
+
+        .guide-alert a {
+            background-color: var(--accent);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: background-color 0.2s;
+        }
+
+        .guide-alert a:hover {
+            background-color: #2563eb;
+        }
+
         .thanks-box {
             background-color: var(--thanks-bg);
             border: 1px solid var(--thanks-border);
@@ -135,6 +170,14 @@
             color: var(--text-main);
         }
 
+        code {
+            background-color: #1f2937;
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: #60a5fa;
+            font-family: monospace;
+        }
+
         .btn-link {
             display: inline-block;
             background-color: var(--accent);
@@ -159,77 +202,79 @@
         <!-- شريط التنقل -->
         <nav>
             <a href="index.html" class="logo">🎮 GameHub</a>
-            <a href="index.html" class="back-btn">← العودة للرئيسية</a>
+            <a href="versions.html" class="back-btn">← العودة لاختيار الإصدارات</a>
         </nav>
 
-        <h1>دليل تعديل الـ PS4 (إصدار 5.05 الأساسي)</h1>
-        <p class="subtitle">كل ما تحتاج معرفته عن بداية الاستقرار الحقيقي لتعديل البلايستيشن بأمان تام.</p>
+        <h1>دليل تعديل الـ PS4 (إصدار 5.05)</h1>
+        <p class="subtitle">التعديل الأسطوري الأكثر استقراراً، يتم بالكامل عبر المتصفح بدون أي فلاشة USB.</p>
 
-        <!-- صندوق الشكر الخاص (مضاف بالأعلى كما طلبت) -->
+        <!-- سطر التوجيه لقسم الشروحات لو مش عارف حاجة -->
+        <div class="guide-alert">
+            <p>🤔 مش عارف معاني الأزرار والاختصارات جوه الاستضافة؟</p>
+            <a href="guides.html">📖 روح لقسم الشروحات والأدلة</a>
+        </div>
+
+        <!-- شكر خاص -->
         <div class="thanks-box">
-            <h3>⭐ شكر خاص وتقدير واجتمع:</h3>
-            <p>كل الشكر والتقدير للمبدع <strong>Karo</strong> على استضافاته الدائمة والمستقرة، والأسطورة <strong>Al-Azif</strong> على أدواته العظيمة وخدمات حماية وحجب التحديثات التي سهلت الكثير على مجتمع اللاعبين.</p>
+            <h3>⭐ شكر خاص وتقدير:</h3>
+            <p>شكر خاص للمطور <strong>Karo</strong> على استضافاته الممتازة، ولكل المطورين الذين ساهموا في جعل إصدار 5.05 هو الأنسب والأكثر استقراراً في تاريخ تعديل الـ PS4.</p>
         </div>
 
-        <!-- صندوق الطمأنة -->
+        <!-- صندوق الملاحظة -->
         <div class="reassurance-box">
-            <h3>💡 خايف تقلق أو جهازك يهنج؟</h3>
-            <p>اطمن خالص، إصدار 5.05 يعتبر من أثبت وأكثر الإصدارات أماناً واستقراراً في تاريخ الـ PS4 كله.</p>
+            <h3>💡 لماذا يُعتبر إصدار 5.05 الأفضل؟</h3>
+            <p>يتميز هذا الإصدار بنسبة نجاح عالية جداً للثغرة ونادراً ما يحدث إعادة تشغيل إجباري (Kernel Panic)، ولا يتطلب أي فلاشات خارجية لتنفيذه.</p>
         </div>
 
-        <!-- الخطوة الأولى: الاتصال بالأمان وحجب التحديثات بـ DNS Al-Azif -->
+        <!-- الخطوة الأولى: التحقق من إصدار الجهاز -->
         <div class="content-box">
-            <h2>1. كيف تتصل بالإنترنت بأمان تام وتفعل DNS Al-Azif (خطوة حماية إجبارية)</h2>
-            <p>عشان تحمي جهازك من أي تحديث بالغلط من شركة سوني، لازم تظبط إعدادات الشبكة بتاعتك وتضيف الـ DNS الشهير المخصص لحظر التحديثات:</p>
+            <h2>1. تحقق من إصدار جهازك (خطوة أساسية)</h2>
+            <p>تأكد بدقة أن جهازك على الإصدار المطلوب قبل الشروع في الخطوات:</p>
             <ul>
-                <li>روح على <strong>Settings</strong> وبعدين <strong>Network</strong> واختار <strong>Set Up Internet Connection</strong>.</li>
-                <li>اختار طريقة الاتصال بتاعتك (سواء <strong>Wi-Fi</strong> أو <strong>LAN Cable</strong>) واختار <strong>Custom</strong> (مخصص) مش Automatic.</li>
-                <li>إعدادات الـ IP Address و DHCP خليهم <strong>Automatic</strong> و <strong>Do Not Use</strong> لحد ما توصل لصفحة الـ <strong>DNS Settings</strong>.</li>
-                <li>في الـ DNS Settings اختار <strong>Manual</strong> (يدوي)، ودخل أرقام DNS الأسطوري لـ Al-Azif للحجب:
+                <li>من القائمة الرئيسية، ادخل على <strong>Settings</strong> (الإعدادات).</li>
+                <li>انزل إلى أسفل القائمة واختار <strong>System</strong> (النظام).</li>
+                <li>اختر <strong>System Information</strong> (معلومات النظام).</li>
+                <li>تأكد تماماً أن خانة <strong>System Software</strong> تُظهر الرقم <strong>5.05</strong>.</li>
+            </ul>
+        </div>
+
+        <!-- الخطوة الثانية: حماية الجهاز بـ DNS -->
+        <div class="content-box">
+            <h2>2. حجب التحديثات الرسمية بـ DNS (أمان تام)</h2>
+            <p>لمنع سوني من تحميل أي تحديث تلقائي بالغلط:</p>
+            <ul>
+                <li>توجه إلى <strong>Settings</strong> ثم <strong>Network</strong> ثم <strong>Set Up Internet Connection</strong>.</li>
+                <li>اختر طريقة الاتصال الخاصة بك واجعل الإعداد <strong>Custom</strong>.</li>
+                <li>عند إعدادات الـ DNS اختر <strong>Manual</strong> وضع القيم الآتية:
                     <ul>
-                        <li><strong>Primary DNS:</strong> <code>165.227.83.145</code> (أو أحياناً <code>062.210.038.117</code> حسب المتاح).</li>
-                        <li><strong>Secondary DNS:</strong> سيبه فاضي أو خليه <code>0.0.0.0</code>.</li>
+                        <li><strong>Primary DNS:</strong> <code>165.227.83.145</code></li>
+                        <li><strong>Secondary DNS:</strong> اتركه فارغاً أو اضبطه على <code>0.0.0.0</code></li>
                     </ul>
                 </li>
-                <li>اكمل باقي الخطوات عادي (MTU خليه Automatic و Proxy خليه Do Not Use). كده جهازك محمي تماماً من تنزيل أي تحديث رسمي في الخلفية!</li>
+                <li>تابع باقي الخطوات باختيار Automatic و Do Not Use لإنهاء الإعداد بنجاح.</li>
             </ul>
         </div>
 
-        <!-- الخطوة الثانية: معرفة الإصدار -->
+        <!-- الخطوة الثالثة: فهم خيارات استضافة Karo لإصدار 5.05 -->
         <div class="content-box">
-            <h2>2. تأكد من إصدار جهازك</h2>
+            <h2>3. دليلك لاختيارات استجيابة Karo لإصدار 5.05</h2>
+            <p>عند فتح استضافة Karo وقسم 5.05، ستجد عدة خيارات رئيسية، وإليك معانيها بدقة:</p>
             <ul>
-                <li>اضغط على <strong>Settings</strong> من القائمة الرئيسية.</li>
-                <li>انزل لـ <strong>System</strong> ثم <strong>System Information</strong>.</li>
-                <li>تأكد إن رقم الـ System Software هو <strong>5.05</strong> بالتحديد.</li>
+                <li><strong>5.05 / MIRA / GoldHEN:</strong> الخيار الشامل لتفعيل أدوات التعديل، ويوصى دائماً باعتماد خيار <strong>GoldHEN</strong> الحديث والمستقر لسهولة تثبيت الألعاب وإدارتها.</li>
+                <li><strong>Hen v2.1.3 / v2.1.4:</strong> النسخ الكلاسيكية القديمة للـ Hen (نادراً ما تُستخدم الآن بعد توفر GoldHEN المدمج والمطور).</li>
+                <li><strong>Dumper:</strong> خيار متخصص لاستخراج وفك الألعاب الأصلية الموجودة على الجهاز إلى ملفات PKG (مفيد للمطورين وصناع المحتوى).</li>
+                <li><strong>Updates Blocker:</strong> أداة إضافية للتأكد من تعطيل ملفات التحديث المؤقتة في النظام.</li>
             </ul>
         </div>
 
-        <!-- تفاصيل إصدار 5.05 وتعديلاته -->
+        <!-- الخطوة الرابعة: طريقة التنفيذ -->
         <div class="content-box">
-            <h2>3. تفاصيل إصدار 5.05 وتعديلاته الشهيرة</h2>
-            <p>ده الإطلاق الحقيقي للجيلبريك المستقر اللي مبقاش يحتاج فلاشة وبقى يعتمد على الويب بشكل كامل.</p>
+            <h2>4. خطوات تفعيل الثغرة نهائياً</h2>
             <ul>
-                <li><strong>اسم التعديلات:</strong> يعتمد على أدوات تفعيل الـ <strong>HEN</strong> أو <strong>GoldHEN</strong> المخصص للثبات.</li>
-                <li><strong>مميزاته:</strong> تشغيل جميع الألعاب وتفعيل وضع السكون (Rest Mode) بسلاسة، وبدون أي فلاشة USB نهائياً.</li>
-            </ul>
-        </div>
-
-        <!-- رابط الاستضافة والشرح الدقيق للاختيارات -->
-        <div class="content-box">
-            <h2>4. طريقة التنفيذ والاختيار الصحيح داخل موقع Karo</h2>
-            <ul>
-                <li>بعد ما ظبطت الإنترنت والـ DNS، افتح متصفح الإنترنت (أو دليل المستخدم) على جهاز الـ PS4.</li>
-                <li>ادخل على استضافة <strong>Karo</strong> الشهيرة.</li>
-                <li><strong>إيه الفرق بين الخيارين؟</strong> لما تفتح قسم الإصدارات هتلاقي زرين:
-                    <ul>
-                        <li><strong>5.05 gold:</strong> هو الخيار الأفضل والحديث الذي يعتمد على تفعيل الـ GoldHEN المباشر والمستقر تماماً (أنصحك تختاره).</li>
-                        <li><strong>5.05 old:</strong> يقصد به الثغرات أو النسخ الأقدم والتقليدية (تجنبه إلا لو واجهتك مشكلة نادرة مع النسخة الـ Gold).</li>
-                    </ul>
-                </li>
-                <li><strong>ملاحظة هامة أثناء التحميل:</strong> الصفحة ستقوم بتحميل ملفات الـ **Cache** (الذاكرة المؤقتة) تلقائياً داخل المتصفح لكي تعمل معك لاحقاً حتى لو انقطع الإنترنت.</li>
-                <li>اضغط على الزر وانتظر ثواني حتى تظهر رسالة النجاح على الشاشة (مثل You're all set).</li>
-                <li><strong>خطوة أمان أخيرة:</strong> بعد انتهاء التفعيل بنجاح، يفضل قفل الإنترنت تماماً عن الجهاز أو الاكتفاء بالـ DNS لحماية جهازك واستقرار التعديل!</li>
+                <li>افتح متصفح الإنترنت (Browser) في جهاز البلايستيشن بعد التأكد من اتصال الإنترنت وتفعيل الـ DNS.</li>
+                <li>انتقل إلى موقع الاستضافة الشهير الخاص بـ Karo.</li>
+                <li>اضغط على خيار <strong>5.05</strong> ثم اختر زر <strong>GoldHEN</strong> (أو الإصدار المناسب لك).</li>
+                <li>انتظر ثوانٍ معدودة حتى تكتمل عملية تحميل الثغرة، وستظهر لك رسالة النجاح (مثل <code>Done</code> أو إشعار تفعيل الـ GoldHEN بنجاح).</li>
             </ul>
             <br>
             <a href="http://karo218.ir" target="_blank" class="btn-link">🔗 الانتقال المباشر لاستضافة Karo</a>
