@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إصدارات التعديل - GameHub</title>
+    <style>
+        :root {
+            --bg-color: #0b0f19;
+            --card-bg: #111827;
+            --text-main: #f3f4f6;
+            --text-muted: #9ca3af;
+            --accent: #3b82f6;
+            --accent-glow: rgba(59, 130, 246, 0.3);
+            --border: #1f2937;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            margin-bottom: 40px;
+        }
+
+        .logo {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .back-btn {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .back-btn:hover {
+            color: var(--accent);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+            flex: 1;
+            width: 100%;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: #ffffff;
+        }
+
+        p.subtitle {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+        }
+
+        .versions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .version-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 35px 25px;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+            display: block;
+            text-align: right;
+        }
+
+        .version-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent);
+            box-shadow: 0 12px 30px var(--accent-glow);
+        }
+
+        .version-card h3 {
+            font-size: 1.8rem;
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+
+        .version-card p {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+
+        .badge-stable {
+            display: inline-block;
+            font-size: 0.85rem;
+            padding: 5px 10px;
+            border-radius: 6px;
+            background-color: rgba(16, 185, 129, 0.1);
+            color: #10b981;
+            border: 1px solid rgba(16, 185, 129, 0.2);
+        }
+
+        .badge-warning {
+            display: inline-block;
+            font-size: 0.85rem;
+            padding: 5px 10px;
+            border-radius: 6px;
+            background-color: rgba(245, 158, 11, 0.1);
+            color: #f59e0b;
+            border: 1px solid rgba(245, 158, 11, 0.2);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- شريط التنقل -->
+        <nav>
+            <a href="index.html" class="logo">🎮 GameHub</a>
+            <a href="ps4.html" class="back-btn">← العودة لقسم PS4</a>
+        </nav>
+
+        <h1>اختر إصدار جهازك</h1>
+        <p class="subtitle">حدد إصدار نظام جهازك (System Software) للذهاب للدليل والصفحة المناسبة له.</p>
+
+        <!-- شبكة اختيار الإصدارات -->
+        <div class="versions-grid">
+            <!-- إصدار 5.05 -->
+            <a href="5.05.html" class="version-card">
+                <h3>إصدار 5.05</h3>
+                <p>الإصدار الأقوى والأكثر استقراراً في تاريخ تعديل البلايستيشن.</p>
+                <span class="badge-stable">🟢 مستقر تماماً وبدون فلاشة</span>
+            </a>
+
+            <!-- إصدار 6.72 (ملحوظة: لو اسم الملف عندك 6.27 تأكد يوافق الرابط تماماً، لو هو 6.72 خليه زي ما هو في الكود) -->
+            <a href="6.72.html" class="version-card">
+                <h3>إصدار 6.72</h3>
+                <p>تعديل يعتمد على المتصفح بدون فلاشة، يشغل ألعاب أحدث.</p>
+                <span class="badge-warning">🟡 بدون فلاشة - يحتاج صبر</span>
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>
