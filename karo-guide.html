@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دليل استخدام استضافة Karo - GameHub</title>
+    <style>
+        :root {
+            --bg-color: #0b0f19;
+            --card-bg: #111827;
+            --text-main: #f3f4f6;
+            --text-muted: #9ca3af;
+            --accent: #3b82f6;
+            --accent-glow: rgba(59, 130, 246, 0.2);
+            --border: #1f2937;
+            --code-bg: #1f2937;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+
+        .logo {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .back-btn {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .back-btn:hover {
+            color: var(--accent);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            color: #ffffff;
+            margin-bottom: 10px;
+            font-size: 2.2rem;
+        }
+
+        .subtitle {
+            color: var(--text-muted);
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+        }
+
+        .content-box {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 25px;
+        }
+
+        .content-box h2 {
+            color: var(--accent);
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 10px;
+        }
+
+        ul {
+            padding-right: 20px;
+            color: var(--text-muted);
+        }
+
+        li {
+            margin-bottom: 12px;
+        }
+
+        strong {
+            color: var(--text-main);
+        }
+
+        code {
+            background-color: var(--code-bg);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: #60a5fa;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- شريط التنقل -->
+        <nav>
+            <a href="index.html" class="logo">🎮 GameHub</a>
+            <a href="ps4.html" class="back-btn">← العودة لقسم PS4</a>
+        </nav>
+
+        <h1>دليل فك شفرات وأزرار استضافة Karo</h1>
+        <p class="subtitle">شرح تفصيلي لكل خيار وزر موجود داخل استضافة Karo الشهيرة لتعديل جميع إصدارات PS4.</p>
+
+        <!-- القسم الأول: الأزرار العلوية -->
+        <div class="content-box">
+            <h2>1. شريط الأدوات العلوي في الاستضافة</h2>
+            <ul>
+                <li><strong>Status:</strong> يوضح لك حالة الاتصال بالذاكرة المؤقتة (Cache) وهل المتصفح مستعد لتطبيق الثغرة أم لا.</li>
+                <li><strong>Copy Cheat:</strong> أداة لنسخ وتثبيت ملفات الغش والأكواد السرية (Cheats) على جهازك لاستخدامها داخل الألعاب.</li>
+                <li><strong>WEB ESP / Binloader:</strong> أدوات متقدمة مخصصة لاستقبال وبث الأكواد عبر الشبكة المحلية (غالباً للمطورين أو لتشغيل أدوات خارجية).</li>
+            </ul>
+        </div>
+
+        <!-- القسم الثاني: معاني الحروف والرموز بجانب الإصدارات -->
+        <div class="content-box">
+            <h2>2. ماذا تعني الحروف والرموز بجانب أرقام الإصدارات؟ (5.05, 6.72, 7.02, 7.55, 9.00)</h2>
+            <p>عندما تفتح الاستضافة، ستجد خيارات متعددة لكل إصدار، وإليك معناها بالكامل:</p>
+            <ul>
+                <li><strong>الرقم الأساسي (مثل 5.05 أو 6.72):</strong> الخيار الافتراضي لتشغيل الثغرة الخام للنظام.</li>
+                <li><strong>Goldhen (مثل Goldhen505 / Goldhen672 / Goldhen900):</strong> الزر الأهم والأكثر استخداماً، يقوم بتفعيل الثغرة وتفعيل قائمة الـ GoldHEN مباشرة بضغطة واحدة (وهي التي تفتح مثبت الألعاب وإعدادات التعديل).</li>
+                <li><strong>الحرف L (مثل 6.72L / 7.02L / 9.00L):</strong> اختصار لـ <strong>Loader</strong> (محمل)، مخصص لتحميل أدوات برمجية مساعدة أو ملفات بين معينة.</li>
+                <li><strong>كلمة Gold (مثل 7.02 Gold):</strong> نسخ معدلة ومدمجة لتحسين استقرار الثغرة وتقليل مشاكل تهنيج الجهاز (Kernel Panic).</li>
+                <li><strong>الحرف A أو NM (مثل 6.72A أو 9.00NM):</strong> 
+                    <ul>
+                        <li><code>6.72A</code>: نسخة معدلة بواسطة المطور (Alih) لتحسين الأداء.</li>
+                        <li><code>9.00NM</code>: اختصار لـ (No MurtZ)، نسخة معدلة بدون شاشات ترحيب مزعجة أو مخصصة للسرعة.</li>
+                    </ul>
+                </li>
+                <li><strong>الـ ESP (مثل ESP505tr / ESP900tr):</strong> مخصصة للأجهزة اللي بتشغل الاستضافة محلياً عبر راوتر صغير أو قطعة هاردوير خارجية (ESP8266).</li>
+            </ul>
+        </div>
+
+        <!-- القسم الثالث: أزرار الصيانة وإدارة المتصفح -->
+        <div class="content-box">
+            <h2>3. أزرار الصيانة السفلية في الاستضافة</h2>
+            <ul>
+                <li><strong>PS4Trainer Offline:</strong> تشغيل أداة الغش الشهيرة وتعديل الألعاب بدون الحاجة لاتصال إنترنت دائم.</li>
+                <li><strong>Restore Host / Restore Cache:</strong> أزرار مهمة جداً لمسح وإعادة ضبط الذاكرة المؤقتة للمتصفح إذا علق الموقع أو حدثت مشكلة في التحميل لتتمكن من البدء نظيفاً.</li>
+            </ul>
+        </div>
+
+    </div>
+
+</body>
+</html>
